@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>From:</strong>
+  <%= @grant.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @grant.to %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @grant.amount %>
+</p>
+
+<%= link_to 'Edit', edit_grant_path(@grant) %> |
+<%= link_to 'Back', grants_path %>

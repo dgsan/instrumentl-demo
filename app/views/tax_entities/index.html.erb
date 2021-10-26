@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tax Entities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ein</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Post code</th>
+      <th>Flags</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tax_entities.each do |tax_entity| %>
+      <tr>
+        <td><%= tax_entity.ein %></td>
+        <td><%= tax_entity.name %></td>
+        <td><%= tax_entity.address %></td>
+        <td><%= tax_entity.city %></td>
+        <td><%= tax_entity.state %></td>
+        <td><%= tax_entity.post_code %></td>
+        <td><%= tax_entity.flags %></td>
+        <td><%= link_to 'Show', tax_entity %></td>
+        <td><%= link_to 'Edit', edit_tax_entity_path(tax_entity) %></td>
+        <td><%= link_to 'Destroy', tax_entity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tax Entity', new_tax_entity_path %>

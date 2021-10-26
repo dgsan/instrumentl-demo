@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+irs = YAML.load(File.read(Rails.root.join("config/irs_docs.yaml")))
+irs["documents"].each { |url| TaxEntity.load_990(url) }

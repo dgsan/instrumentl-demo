@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ein:</strong>
+  <%= @tax_entity.ein %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tax_entity.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @tax_entity.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @tax_entity.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @tax_entity.state %>
+</p>
+
+<p>
+  <strong>Post code:</strong>
+  <%= @tax_entity.post_code %>
+</p>
+
+<p>
+  <strong>Flags:</strong>
+  <%= @tax_entity.flags %>
+</p>
+
+<%= link_to 'Edit', edit_tax_entity_path(@tax_entity) %> |
+<%= link_to 'Back', tax_entities_path %>
