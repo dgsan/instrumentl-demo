@@ -5,7 +5,7 @@
 * Currently loading the existing data set happens via seeds.
   This probably wouldn't be how I'd approach pulling data from third parties
   in other circumstances, but for a quick, one-off demo, it seems fine.
-* Visit: /tax_entities[?state=<code>] to view results.
+* Visit: `/tax_entities[?state=<code>]` to view results.
 * Using JSONAPI spec because of using jsonapi-serializer
 * View on Heroku at https://instrumentl-demo.herokuapp.com/
 * Went with the easiest to use way of dealing with XML. It seems clear
