@@ -61,3 +61,5 @@ gem "flag_shih_tzu", "~> 0.3.23"
 gem "down", "~> 5.2"
 
 gem "jsonapi-serializer", "~> 2.2"
+
+gem "rexml", "~> 3.2"
