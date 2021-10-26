@@ -12,3 +12,6 @@
   that something more powerful would be a better choice if dealing with
   lots of docs like this in production. If there's a trick to predicting
   tag changes I didn't notice it.
+* Set this project up with tailwind and stimulus reflex to potentially play
+  with them in the future, but that caused a huge time sync because of the
+  javascript pack pipeline stuff having issues...
