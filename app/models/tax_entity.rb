@@ -55,6 +55,7 @@ class TaxEntity < ApplicationRecord
     city = address_wrap["City"] || address_wrap["CityNm"]
     state = address_wrap["State"] || address_wrap["StateAbbreviationCd"]
     post_code = address_wrap["ZIPCode"] || address_wrap["ZIPCd"]
+    purpose = rec["PurposeOfGrantTxt"] || nil
     ein = rec.dig("RecipientEIN") || rec.dig("EINOfRecipient")
     unless ein
       ein = "dummy_ein_" + Digest::SHA256.hexdigest("tax-#{name}#{state}#{post_code}-entity")
@@ -75,7 +76,8 @@ class TaxEntity < ApplicationRecord
       from_ein: granter_ein,
       to_ein: ein,
       year: year,
-      amount: amount
+      amount: amount,
+      purpose: purpose
     )
   end
 end
