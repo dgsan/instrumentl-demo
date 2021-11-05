@@ -12,7 +12,10 @@ class TaxEntitiesController < ApplicationController
     options = {
       include: [:granted, :'granted.to']
     }
-    render json: TaxEntitySerializer.new(@tax_entities, options).serializable_hash.to_json
+    respond_to do |format|
+      format.json { render json: TaxEntitySerializer.new(@tax_entities, options).serializable_hash.to_json }
+      format.html { render "static/index" }
+    end
   end
 
   # GET /tax_entities/1 or /tax_entities/1.json
